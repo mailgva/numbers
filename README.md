@@ -8,7 +8,7 @@ Requirements:
 
 # Application realized as web-server using REST (JSON). 
 Technologies:
-- Java 15
+- Java 11
 - Maven  
 - Spring 5.3.2 (no boot)
 - Hibernate 5.4.26.Final
