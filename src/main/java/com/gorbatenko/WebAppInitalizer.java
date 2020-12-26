@@ -1,5 +1,6 @@
 package com.gorbatenko;
 
+import com.gorbatenko.config.WebMvcConfig;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -23,7 +24,8 @@ public class WebAppInitalizer extends AbstractAnnotationConfigDispatcherServletI
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[]{WebAppInitalizer.class};
+        return new Class[]{WebMvcConfig.class};
+        //return new Class<?>[]{WebAppInitalizer.class};
     }
 
     @Override

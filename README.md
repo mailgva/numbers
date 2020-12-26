@@ -20,14 +20,12 @@ App not contains:
 - docker image
 
 # Tutorial
-1. Get from git: **git clone https://github.com/mailgva/numbers** 
-2. Execute  **mvn clean install**. Will create **numbers.war** file. 
-3. You need installed **PostgreSQL** (default port) and database called **numbers**
+1. Get from git: **git clone https://github.com/mailgva/numbers**
+2. You need installed **PostgreSQL** (default port) and database called **numbers**
    - login **user**
-   - password **password** 
-4. Launch Tomcat.
-5. Deploy **numbers.war**.
-6. Enjoy app :)
+   - password **password**
+3. Execute  **mvn clean jetty:run**.  
+4. Enjoy app :)
 
 # Available URLs:
 1. **/api/v1/fact/{number}** - to get number fact 
@@ -38,9 +36,9 @@ App not contains:
 6. **/api/v1/avglatency/** - to get average average latency of the Numbers service
 7. **/api/v1/successrate/** - to get average success rate of the Numbers service
 
-Example:
-curl http://localhost:8080/numbers/api/v1/fact/11 -H "Accept: application/json"
-curl http://localhost:8080/numbers/api/v1/fact/1970/year -H "Accept: application/json"
-curl http://localhost:8080/numbers/api/v1/mostpopular/ -H "Accept: application/json"
-curl http://localhost:8080/numbers/api/v1/avglatency/ -H "Accept: application/json"
-curl http://localhost:8080/numbers/api/v1/successrate/ -H "Accept: application/json"
+# Example:
+1. curl http://localhost:8080/numbers/api/v1/fact/11 -H "Accept: application/json"
+2. curl http://localhost:8080/numbers/api/v1/fact/1970/year -H "Accept: application/json"
+3. curl http://localhost:8080/numbers/api/v1/mostpopular/ -H "Accept: application/json"
+4. curl http://localhost:8080/numbers/api/v1/avglatency/ -H "Accept: application/json"
+5. curl http://localhost:8080/numbers/api/v1/successrate/ -H "Accept: application/json"

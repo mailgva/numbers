@@ -67,7 +67,7 @@ public class NumberController {
     public Map<String, String> getNumberFactByType(@PathVariable int number,
                                                    @PathVariable String type) throws IOException {
         if(!types.contains(type)) {
-            return wrap("error", "type is incorrect!");
+            return wrap("error", "Type is incorrect! Choose one from " + types);
         }
         String fact = getFact(number, type);
         return wrap("fact", fact);
